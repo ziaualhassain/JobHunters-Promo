@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobHunters — AI Career Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0B0F19;
+      overflow-x: hidden;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #818CF8, #22D3EE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.18);
+      filter: blur(120px);
+      z-index: 0;
+    }
+  </style>
+</head>
+<body class="text-white relative">
+
+  <div class="hero-glow top-0 right-0"></div>
+  <div class="hero-glow bottom-0 left-0 bg-cyan-500/10"></div>
+
+  <header class="border-b border-white/10 sticky top-0 z-50 backdrop-blur-xl bg-[#0B0F19]/70">
+  
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+    <div class="flex flex-col">
+
+  <h1 class="text-2xl font-bold tracking-tight leading-none">
+    JobHunters
+  </h1>
+
+  <span class="text-[11px] tracking-[0.25em] uppercase text-cyan-400/80 mt-1">
+    by insighters
+  </span>
+
+</div>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+
+      <a
+        href="#features"
+        class="hover:text-cyan-400 transition duration-300"
+      >
+        Features
+      </a>
+
+      <a
+        href="#workflow"
+        class="hover:text-cyan-400 transition duration-300"
+      >
+        Workflow
+      </a>
+
+      <a
+        href="#dashboard"
+        class="hover:text-cyan-400 transition duration-300"
+      >
+        Dashboard
+      </a>
+
+      <a
+        href="#faq"
+        class="hover:text-cyan-400 transition duration-300"
+      >
+        FAQs
+      </a>
+
+      <a
+  href="#early-access"
+  class="bg-white text-black px-5 py-2 rounded-full font-semibold hover:scale-105 transition duration-300 shadow-lg shadow-white/10 inline-flex items-center justify-center"
+>
+  Early Access
+</a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+  <section class="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-20 grid lg:grid-cols-2 gap-20 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/20 bg-indigo-500/10 text-indigo-300 text-sm mb-6">
+        AI-Powered Career Platform
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+        Your Complete
+        <span class="gradient-text block mt-2">Career Dashboard</span>
+      </h1>
+
+      <p class="mt-8 text-lg text-gray-300 leading-relaxed max-w-2xl">
+        Search jobs, optimize resumes, track applications, practice interviews,
+        and prepare smarter with AI — all from one modern platform.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <button class="bg-white text-black px-7 py-4 rounded-2xl font-semibold hover:scale-105 transition duration-300 shadow-2xl shadow-white/10">
+          Join Waitlist
+        </button>
+
+        <button class="border border-white/15 px-7 py-4 rounded-2xl hover:bg-white/5 transition">
+          Watch Demo
+        </button>
+      </div>
+
+      <div class="grid grid-cols-3 gap-8 mt-14 max-w-xl">
+        <div>
+          <h3 class="text-3xl font-bold">5+</h3>
+          <p class="text-sm text-gray-400 mt-2">Job Sources</p>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold">AI</h3>
+          <p class="text-sm text-gray-400 mt-2">Resume Enhancer</p>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold">24/7</h3>
+          <p class="text-sm text-gray-400 mt-2">Interview Coach</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="dashboard" class="relative">
+      <div class="glass rounded-[32px] p-6 shadow-2xl shadow-indigo-500/10">
+
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <p class="text-sm text-gray-400">Dashboard</p>
+            <h2 class="text-2xl font-semibold mt-1">Career Overview</h2>
+          </div>
+
+          <div class="bg-green-500/10 border border-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">
+            Live Sources
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-5">
+          <div class="bg-[#121826] rounded-2xl p-5 border border-white/5">
+            <p class="text-gray-400 text-sm">Jobs Aggregated</p>
+            <h3 class="text-3xl font-bold mt-3">12.4K</h3>
+          </div>
+
+          <div class="bg-[#121826] rounded-2xl p-5 border border-white/5">
+            <p class="text-gray-400 text-sm">Applications</p>
+            <h3 class="text-3xl font-bold mt-3">38</h3>
+          </div>
+        </div>
+
+        <div class="bg-[#121826] rounded-2xl p-5 border border-white/5 mb-5">
+          <div class="flex items-center justify-between mb-5">
+            <div>
+              <h3 class="font-semibold">Interview Pipeline</h3>
+              <p class="text-sm text-gray-400 mt-1">Realtime Kanban Workflow</p>
+            </div>
+
+            <span class="text-sm text-indigo-300">7 Stages</span>
+          </div>
+
+          <div class="grid grid-cols-4 gap-3 text-center text-xs">
+            <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+              <p>Saved</p>
+              <h4 class="text-lg font-bold mt-2">12</h4>
+            </div>
+
+            <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+              <p>Applied</p>
+              <h4 class="text-lg font-bold mt-2">8</h4>
+            </div>
+
+            <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+              <p>Technical</p>
+              <h4 class="text-lg font-bold mt-2">4</h4>
+            </div>
+
+            <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+              <p>Offer</p>
+              <h4 class="text-lg font-bold mt-2">2</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 rounded-2xl border border-white/10 p-5">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-gray-300">AI Resume Match</p>
+              <h3 class="text-5xl font-bold mt-3">92%</h3>
+            </div>
+
+            <div class="w-24 h-24 rounded-full border-8 border-cyan-400/30 flex items-center justify-center text-xl font-bold">
+              AI
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="text-indigo-300 font-medium">Features</p>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-5 leading-tight">
+        Built for Modern Tech Professionals
+      </h2>
+
+      <p class="text-gray-400 text-lg leading-relaxed mt-6">
+        Everything you need to manage your job search journey — intelligently organized into one unified platform.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+
+      <div class="glass rounded-3xl p-7 hover:-translate-y-1 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-500 mb-6 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9m-9 6h9m-9 6h9M4.5 6h.008v.008H4.5V6Zm0 6h.008v.008H4.5V12Zm0 6h.008v.008H4.5V18Z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold">Aggregated Job Search</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">
+          Aggregates jobs from RemoteOK, Himalayas, ArbeitNow, We Work Remotely, and TheirStack.
+        </p>
+      </div>
+
+      <div class="glass rounded-3xl p-7 hover:-translate-y-1 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-500 mb-6 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375H14.25V6.375A2.625 2.625 0 0 0 11.625 3.75h-4.5A2.625 2.625 0 0 0 4.5 6.375v11.25a2.625 2.625 0 0 0 2.625 2.625h9.75A2.625 2.625 0 0 0 19.5 17.625V16.5m-6-6 2.25 2.25 4.5-4.5" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold">AI Resume Enhancer</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">
+          Upload your resume, receive AI improvements, and export professional templates instantly.
+        </p>
+      </div>
+
+      <div class="glass rounded-3xl p-7 hover:-translate-y-1 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-500 mb-6 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a3.375 3.375 0 1 1 6.75 0c0 1.866-1.06 2.477-2.09 3.07-.962.553-1.91 1.098-1.91 2.43m.375 3.75h.008v.008h-.008V18.75Z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold">Interview Coach</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">
+          Practice AI-powered interviews with configurable company and role contexts.
+        </p>
+      </div>
+
+      <div class="glass rounded-3xl p-7 hover:-translate-y-1 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-500 mb-6 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h4.5v13.5h-4.5V5.25Zm6.75 0h9.75v6h-9.75v-6Zm0 8.25h9.75v5.25h-9.75V13.5Z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold">Kanban Pipeline</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">
+          Drag-and-drop application workflow from Saved → Offer with notes and analytics.
+        </p>
+      </div>
+
+      <div class="glass rounded-3xl p-7 hover:-translate-y-1 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-500 mb-6 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m6 2.25a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold">Preparation Tracker</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">
+          AI-generated study plans, progress streaks, and per-task coaching support.
+        </p>
+      </div>
+
+      <div class="glass rounded-3xl p-7 hover:-translate-y-1 transition duration-300">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-500 mb-6 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17 6 20.75m0 0L2.25 17m3.75 3.75V9.75m4.5-2.75L14.25 3.25m0 0L18 7m-3.75-3.75v11" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold">Cross Device Sync</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">
+          Resume uploads, filters, and application pipeline synced securely across devices.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="workflow" class="border-y border-white/10 bg-white/[0.02]">
+    <div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <p class="text-indigo-300 font-medium">Workflow</p>
+
+        <h2 class="text-4xl md:text-5xl font-bold mt-5 leading-tight">
+          Simplify Your Entire Career Journey
+        </h2>
+
+        <p class="text-gray-400 text-lg leading-relaxed mt-6">
+          JobHunters intelligently combines job discovery, resume enhancement, interview preparation, and productivity into one modern AI platform.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+
+        <div class="glass rounded-2xl p-5 flex items-center gap-5">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 flex items-center justify-center font-bold">1</div>
+          <p>Upload your resume</p>
+        </div>
+
+        <div class="glass rounded-2xl p-5 flex items-center gap-5">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 flex items-center justify-center font-bold">2</div>
+          <p>AI extracts skills & job preferences</p>
+        </div>
+
+        <div class="glass rounded-2xl p-5 flex items-center gap-5">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 flex items-center justify-center font-bold">3</div>
+          <p>Discover relevant opportunities instantly</p>
+        </div>
+
+        <div class="glass rounded-2xl p-5 flex items-center gap-5">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 flex items-center justify-center font-bold">4</div>
+          <p>Track interviews and applications visually</p>
+        </div>
+
+        <div class="glass rounded-2xl p-5 flex items-center gap-5">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 flex items-center justify-center font-bold">5</div>
+          <p>Prepare smarter with AI coaching</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+<section id="faq" class="max-w-5xl mx-auto px-6 py-24">
+
+  <div class="text-center mb-14">
+    <p class="text-indigo-300 font-medium">FAQs</p>
+
+    <h2 class="text-4xl md:text-5xl font-bold mt-4">
+      Frequently Asked Questions
+    </h2>
+
+    <p class="text-gray-400 mt-5 text-lg">
+      Everything you need to know about JobHunters.
+    </p>
+  </div>
+
+  <div class="space-y-5">
+
+    <!-- FAQ ITEM - INTRODUCTION -->
+<!-- FAQ ITEM - PLATFORM VISION -->
+
+<div class="glass rounded-2xl overflow-hidden border border-cyan-500/20 bg-gradient-to-r from-cyan-500/5 to-indigo-500/5">
+
+  <button
+    class="faq-btn w-full flex items-center justify-between px-6 py-6 text-left hover:bg-white/[0.03] transition"
+  >
+
+    <span class="text-xl font-semibold leading-relaxed">
+      Why was JobHunters created?
+    </span>
+
+    <span class="faq-icon text-2xl text-cyan-400 transition duration-300">
+      +
+    </span>
+
+  </button>
+
+  <div
+    class="faq-answer hidden px-6 pb-8 text-gray-300 leading-8 text-[15px]"
+  >
+
+    Job hunting can be a difficult and overwhelming journey — from searching for opportunities and applying for them to tracking interview phases and preparing consistently.
+
+    <br /><br />
+
+    To simplify that entire process, we created <span class="text-white font-semibold">JobHunters</span> with a much broader vision.
+
+    <br /><br />
+
+    The platform is designed to help users manage their complete career workflow in one centralized place.
+
+    <br /><br />
+
+    From discovering opportunities across multiple sources, applying for jobs, monitoring interview stages through an intelligent tracking system, preparing with curated action plans, tracking preparation progress, practicing interviews using AI, enhancing resumes, and much more — JobHunters is built to make the entire experience smarter and more manageable.
+
+    <br /><br />
+
+    We also understand that opportunities can come from anywhere across the broader internet. Because of that, users are not limited to tracking only applications submitted through our platform — they can manually add and manage external opportunities as well.
+
+    <br /><br />
+
+    JobHunters is not just another job board. It is designed to become a modern AI-powered career operating system for tech professionals.
+
+  </div>
+
+</div>
+
+   <!-- FAQ ITEM -->
+<div class="glass rounded-2xl overflow-hidden border border-white/10">
+
+  <button
+    class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/[0.03] transition"
+  >
+    <span class="text-lg font-semibold">
+      Is JobHunters free to use?
+    </span>
+
+    <span class="faq-icon text-2xl text-cyan-400 transition duration-300">
+      +
+    </span>
+  </button>
+
+  <div class="faq-answer hidden px-6 pb-6 text-gray-400 leading-relaxed">
+    JobHunters will offer both free and premium plans. Core job discovery features will remain accessible for everyone, while advanced AI-powered tools and enhanced personalization may be part of future premium plans.
+  </div>
+
+</div>
+
+<!-- FAQ ITEM -->
+<div class="glass rounded-2xl overflow-hidden border border-white/10">
+
+  <button
+    class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/[0.03] transition"
+  >
+    <span class="text-lg font-semibold">
+      Why will some AI features become paid?
+    </span>
+
+    <span class="faq-icon text-2xl text-cyan-400 transition duration-300">
+      +
+    </span>
+  </button>
+
+  <div class="faq-answer hidden px-6 pb-6 text-gray-400 leading-relaxed">
+    AI-powered resume enhancement, mock interviews, personalized recommendations, and preparation tracking require significant cloud infrastructure and computational resources. Premium plans help us sustainably provide faster, smarter, and continuously improving AI experiences.
+  </div>
+
+</div>
+
+<!-- FAQ ITEM -->
+<div class="glass rounded-2xl overflow-hidden border border-white/10">
+
+  <button
+    class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/[0.03] transition"
+  >
+    <span class="text-lg font-semibold">
+      Will my resume and personal data remain secure?
+    </span>
+
+    <span class="faq-icon text-2xl text-cyan-400 transition duration-300">
+      +
+    </span>
+  </button>
+
+  <div class="faq-answer hidden px-6 pb-6 text-gray-400 leading-relaxed">
+    Yes. JobHunters is designed with privacy and security in mind. Uploaded resumes and profile information are securely stored and never shared with third parties without your permission.
+  </div>
+
+</div>
+
+<!-- FAQ ITEM -->
+<div class="glass rounded-2xl overflow-hidden border border-white/10">
+
+  <button
+    class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/[0.03] transition"
+  >
+    <span class="text-lg font-semibold">
+      Where are the job listings sourced from?
+    </span>
+
+    <span class="faq-icon text-2xl text-cyan-400 transition duration-300">
+      +
+    </span>
+  </button>
+
+  <div class="faq-answer hidden px-6 pb-6 text-gray-400 leading-relaxed">
+    JobHunters aggregates opportunities from multiple trusted job platforms including RemoteOK, We Work Remotely, Himalayas, ArbeitNow, and TheirStack.
+  </div>
+
+</div>
+
+<!-- FAQ ITEM -->
+<div class="glass rounded-2xl overflow-hidden border border-white/10">
+
+  <button
+    class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/[0.03] transition"
+  >
+    <span class="text-lg font-semibold">
+      Can I use JobHunters on mobile devices?
+    </span>
+
+    <span class="faq-icon text-2xl text-cyan-400 transition duration-300">
+      +
+    </span>
+  </button>
+
+  <div class="faq-answer hidden px-6 pb-6 text-gray-400 leading-relaxed">
+    Yes. JobHunters is fully responsive and optimized for desktop, tablet, and mobile devices with synchronized cross-device experiences.
+  </div>
+
+</div>
+    
+  </div>
+</section>
+
+
+<script>
+
+  const faqButtons = document.querySelectorAll('.faq-btn');
+
+  faqButtons.forEach((button) => {
+
+    button.addEventListener('click', () => {
+
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+
+      answer.classList.toggle('hidden');
+
+      if (answer.classList.contains('hidden')) {
+
+        icon.textContent = '+';
+
+      } else {
+
+        icon.textContent = '−';
+
+      }
+
+    });
+
+  });
+
+</script>
+
+<section id="early-access" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="glass rounded-[40px] p-10 md:p-16 text-center bg-gradient-to-r from-indigo-500/10 to-cyan-500/10">
+
+      <p class="text-indigo-300 font-medium">Launching Soon</p>
+
+      <h2 class="text-5xl md:text-6xl font-bold mt-5 leading-tight">
+        AI-Powered Careers.
+        <span class="gradient-text block mt-2">Built for the Future.</span>
+      </h2>
+
+      <p class="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed mt-8">
+        Join the next generation of tech professionals using AI-driven workflows to discover jobs, optimize resumes, and prepare for interviews.
+      </p>
+
+      <div class="mt-10 flex flex-col md:flex-row justify-center gap-4">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="bg-black/30 border border-white/10 rounded-2xl px-5 py-4 md:w-[360px] outline-none focus:border-indigo-400"
+        />
+
+        <button class="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition duration-300">
+          Get Early Access
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="border-t border-white/10 py-8 text-center text-sm text-gray-500">
+    JobHunters · Built by Team Insighters · © 2026
+  </footer>
+
+</body>
+</html>
