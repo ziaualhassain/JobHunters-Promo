@@ -15,15 +15,16 @@
 
     * {
       font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+      max-width: 100%;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html,
     body {
-      background: #0B0F19;
+      width: 100%;
       overflow-x: hidden;
+      background: #0B0F19;
+      scroll-behavior: smooth;
     }
 
     .glass {
@@ -46,6 +47,7 @@
       background: rgba(99, 102, 241, 0.18);
       filter: blur(120px);
       z-index: 0;
+      pointer-events: none;
     }
 
   </style>
@@ -53,8 +55,8 @@
 
 <body class="text-white relative">
 
-  <div class="hero-glow top-0 right-0"></div>
-  <div class="hero-glow bottom-0 left-0 bg-cyan-500/10"></div>
+  <div class="hero-glow top-0 right-\[-220px\]"></div>
+  <div class="hero-glow bottom-0 left-\[-220px\] bg-cyan-500/10"></div>
 
   <!-- HEADER -->
 
@@ -635,8 +637,38 @@
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
+    // Toggle mobile menu
+
     menuBtn.addEventListener('click', () => {
+
       mobileMenu.classList.toggle('hidden');
+
+    });
+
+    // Close menu after clicking any mobile nav link
+
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    mobileLinks.forEach((link) => {
+
+      link.addEventListener('click', () => {
+
+        mobileMenu.classList.add('hidden');
+
+      });
+
+    });
+
+    // Close mobile menu on resize
+
+    window.addEventListener('resize', () => {
+
+      if (window.innerWidth >= 768) {
+
+        mobileMenu.classList.add('hidden');
+
+      }
+
     });
 
   </script>
